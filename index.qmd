@@ -22,6 +22,7 @@ format:
     fig-dpi: 300
     fig-height: 4
     link-citations: true
+    keep-tex: true
   html:
     theme: cosmo
     code-fold: true
@@ -132,7 +133,7 @@ mapDK <- ggplot() +
 #| message: false
 #| warning: false
 #| label: fig-mapDK
-#| fig-cap: Map showing the location of Jutland in Denmark (in yellow) and showing the location of some landmarks mentioned throughout the paper. Plotted in R using the `ggplot2`, `eurostat`, and `sf` libraries [@wickham2016; @lahti2017; @pebesma2018]
+#| fig-cap: Map showing the location of Jutland in Denmark (in yellow) and showing the location of some landmarks mentioned throughout the paper. Plotted in R using the `ggplot2`, `eurostat`, and `sf` libraries [@wickham2016; @lahti2017; @pebesma2018].
 
 mapDK
 ```
@@ -166,7 +167,7 @@ In Danish phonology, 'strong' prosodic positions are onsets before a full vowel,
 ### Stop gradation in Modern Standard Danish {#sec-grad-msd}
 
 In Modern Standard Danish, there are no voiced obstruents in strong position [@fischerjorgensen1954; @puggaardrode2022_voicing].
-The laryngeal contrast between the two stop series /b d g/ and /p t k/ is primarily regulated through differences in the timing and magnitude of laryngeal gestures [@hutters1985], and the presence or absence of aspiration or affrication noise [@fischerjorgensen1972_tapecutting]. /b d g/ are unaspirated \[p t k\], and there is evidence that the voicelessness is actively enforced with a small glottal spreading gesture [@fischerjorgensen1974; @hutters1984; -@hutters1985; @puggaardrode2022_voicing]. /p t k/ are aspirated \[pʰ tʰ kʰ\]. A common phonological analysis of Danish consonants holds that /p t k/ deaspirate in weak position, while /b d g/ select a variety of semivocalic allophones which often differ radically from their strong counterparts [e.g. @rischel1970; @basboll2005; @gronnum2005]. These patterns are summarized in (`r i+1`), where WP is short for weak position and SP is short for strong position.^[Note that stop gradation does not consistently apply for /b/; gradation in (`r i`b) only affects select lexical items, and there is great stylistic and interspeaker variability in which and how many lexical items are affected. However, there are several indications from dialectology and beyond that stop gradation in /b/ used to be more widespread in earlier stages of the language [e.g. @jorgensen2021].]
+The laryngeal contrast between the two stop series /b d g/ and /p t k/ is primarily regulated through differences in the timing and magnitude of laryngeal gestures [@hutters1985], and the presence or absence of aspiration or affrication noise [@fischerjorgensen1972_tapecutting]. /b d g/ are unaspirated \[p t k\], and there is evidence that the voicelessness is actively enforced with a small glottal spreading gesture [@fischerjorgensen1974; @hutters1984; -@hutters1985; @puggaardrode2022_voicing]. /p t k/ are aspirated \[pʰ tʰ kʰ\]. A common phonological analysis of Danish consonants holds that /p t k/ deaspirate in weak position, while /b d g/ select a variety of semivocalic allophones which often differ radically from their strong counterparts [e.g. @rischel1970; @basboll2005; @gronnum2005]. These patterns are summarized in (`r i+1`), where WP is short for weak position and SP is short for strong position.^[Note that stop gradation does not consistently apply for /b/; gradation in (`r i+1`b) only affects select lexical items, and there is great stylistic and interspeaker variability in which and how many lexical items are affected. However, there are several indications from dialectology and beyond that stop gradation in /b/ used to be more widespread in earlier stages of the language [e.g. @jorgensen2021].]
 
 ```{r grad}
 #This is admittedly a nuts way of typesetting a linguistic example,
@@ -1408,10 +1409,23 @@ Given the extensive standardization that has characterized the Danish dialect la
 
 ## Availability of data and code {.unnumbered}
 
-The recordings used in this study are freely available online from this URL: [dansklyd.statsbiblioteket.dk/samling/dialektsamlingen](https://dansklyd.statsbiblioteket.dk/samling/dialektsamlingen/). Other analysis data, fitted model objects, and code, including a version of this paper with embedded R code demonstrating all analytical steps, will be shared in an open repository if the paper is accepted. These will be made available to reviewers upon request.
+The recordings used in this study are freely available online from this URL: [dansklyd.statsbiblioteket.dk/samling/dialektsamlingen](https://dansklyd.statsbiblioteket.dk/samling/dialektsamlingen/). Other analysis data, fitted model objects, and code, can be accessed from [https://doi.org/10.17605/OSF.IO/HYNQX](https://doi.org/10.17605/OSF.IO/HYNQX){target='_blank'}. A version of this paper with embedded R code demonstrating all analytical steps is available from [https://rpuggaardrode.github.io/hisphoncog](https://rpuggaardrode.github.io/hisphoncog){target='_blank'}.
 
 ## Acknowledgments {.unnumbered}
 
 This work has benefitted greatly from helpful comments, suggestions, and discussions at various stages of the process. Thanks to Janet Grijzenhout, Bert Botma, James Kirby, Camilla Søballe Horslund, Henrik Jørgensen, Yonatan Goldshtein, Anna Jespersen, Ander Egurtzegi, Oliver Niebuhr, Cesko Voeten, Martin Krämer, Inger Schoonderbeek Hansen and everyone at the Peter Skautrup Center, audiences at *HISPhonCog* 2023, *FiNo* 2020, *LabPhon* 2020, and *ICLaVE* 2019. Special thanks to the editor Holger Mitterer and anonymous peer reviewers.
+
+::: {.content-visible when-format="html"}
+::: {.callout-note collapse="true"}
+## Session info
+
+Note that the GAMMs were fitted on the IPS server with a slightly newer version of `mgcv` (1.8.42). It shouldn’t have any effect on the results though.
+
+```{r}
+sessionInfo()
+```
+
+:::
+:::
 
 # References {.unnumbered}
