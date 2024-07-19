@@ -1,0 +1,7 @@
+.Rdata
+.Rhistory
+.Rproj.user
+.httr-oauth
+.DS_Store
+.quarto
+mods/*
