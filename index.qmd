@@ -43,6 +43,15 @@ i <- 0
 ```
 
 ::: {.content-visible when-format="html"}
+::: {.callout-tip collapse="false"}
+## Citation information
+
+This manuscript has been accepted for publication in *Journal of Phonetics* and is in press.
+
+:::
+:::
+
+::: {.content-visible when-format="html"}
 ::: {.callout-note collapse="true"}
 ## What's this?
 
@@ -1202,7 +1211,7 @@ gam_map(gam_vot, dia_polygon, legend_name='Fitted positive VOT')
 #| fig-cap: Fitted VOT values attributed to the geographic variable overlaid on a map of Jutland, with colors removed where $p>0.05$. Plotted with `ggplot2` [@wickham2016].
 #| fig-height: 3.5
 
-gam_map(gam_vot, dia_polygon, legend_name='Fitted VOT', sig_level=0.05)
+gam_map(gam_vot, dia_polygon, legend_name='Fitted positive VOT', sig_level=0.05)
 ```
 
 ```{r}
@@ -1210,7 +1219,7 @@ gam_map(gam_vot, dia_polygon, legend_name='Fitted VOT', sig_level=0.05)
 #| fig-cap: Fitted VOT values attributed to the geographic variable as well as upper and lower bounds of 95% confidence interval overlaid on a map of Jutland. Plotted with `ggplot2` [@wickham2016].
 #| fig-height: 3.5
 
-gam_map_ci(gam_vot, dia_polygon, legend_name='Fitted VOT')
+gam_map_ci(gam_vot, dia_polygon, legend_name='Fitted positive VOT')
 ```
 
 As previously mentioned, the GAMM modelling VOT actually fits a subset of the same data with the same annotations as @puggaard2021, although some covariates were added here and the model structure is different; @puggaard2021 presented a model of positive VOT in all stops [see also @puggaardrode2023_diss, chapter 6]. The principal results are all the same; @puggaard2021 also found gradually decreasing VOT moving south--north in a similar pattern, and the parametric effects were all significant in the same direction except for [sex]{.smallcaps}, which did not approach significance in the previous study. The results are discussed further in @sec-disc-pred below.
